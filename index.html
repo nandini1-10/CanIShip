@@ -77,6 +77,23 @@
             padding-top: 1rem;
             border-top: 1px solid #ddd;
         }
+        
+        /* New Ad Styles */
+        .ad-container {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 25px 0;
+            border-left: 4px solid #667eea;
+            text-align: center;
+        }
+        
+        .ad-title {
+            font-size: 16px;
+            color: #333;
+            margin-bottom: 15px;
+            font-weight: bold;
+        }
     </style>
 </head>
 <body>
@@ -86,6 +103,13 @@
             <p>Authentic International Shipping Rules Based on Official Regulations</p>
         </div>
     </header>
+
+    <!-- Adsterra Native Ad - Header -->
+    <div class="ad-container">
+        <div class="ad-title">🚀 Recommended Shipping Partners</div>
+        <script async="async" data-cfasync="false" src="//pl27711528.revenuecpmgate.com/9ca95a7f92319987c9b264035abf8784/invoke.js"></script>
+        <div id="container-9ca95a7f92319987c9b264035abf8784"></div>
+    </div>
 
     <section class="hero">
         <div class="container">
@@ -133,9 +157,52 @@
                 </form>
                 
                 <div id="result" class="result"></div>
+
+                <!-- Adsterra Native Ad - After Results -->
+                <div class="ad-container" id="resultsAd" style="display: none;">
+                    <div class="ad-title">🌍 Global Shipping Solutions</div>
+                    <script async="async" data-cfasync="false" src="//pl27711528.revenuecpmgate.com/9ca95a7f92319987c9b264035abf8784/invoke.js"></script>
+                    <div id="container-9ca95a7f92319987c9b264035abf8784"></div>
+                </div>
             </div>
         </div>
     </section>
+
+    <!-- Adsterra Native Ad - Before Footer -->
+    <div class="container">
+        <div class="ad-container">
+            <div class="ad-title">📦 International Logistics Partners</div>
+            <script async="async" data-cfasync="false" src="//pl27711528.revenuecpmgate.com/9ca95a7f92319987c9b264035abf8784/invoke.js"></script>
+            <div id="container-9ca95a7f92319987c9b264035abf8784"></div>
+        </div>
+    </div>
+
+    <div class="container" style="margin: 3rem auto; text-align: center;">
+        <h3>Comprehensive International Trade Regulations</h3>
+        <p>Based on official customs regulations, international treaties, and trade agreements</p>
+        
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem; margin-top: 2rem;">
+            <div style="padding: 1rem; background: white; border-radius: 5px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
+                <h4>🌍 International Standards</h4>
+                <p>WTO agreements, WCO standards, UN regulations</p>
+            </div>
+            <div style="padding: 1rem; background: white; border-radius: 5px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
+                <h4>📚 Official Sources</h4>
+                <p>Government publications, customs bulletins, trade agreements</p>
+            </div>
+            <div style="padding: 1rem; background: white; border-radius: 5px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
+                <h4>⚖️ Legal Compliance</h4>
+                <p>Based on actual laws and regulations</p>
+            </div>
+        </div>
+    </div>
+
+    <footer style="background: #333; color: white; text-align: center; padding: 2rem 0; margin-top: 3rem;">
+        <div class="container">
+            <p>&copy; 2024 CanIShip. Authentic international shipping intelligence.</p>
+            <p><small>Disclaimer: This information is for guidance only. Always consult with professional customs brokers and official government sources.</small></p>
+        </div>
+    </footer>
 
     <script>
         // AUTHENTIC SHIPPING RULES DATABASE - Based on official regulations
@@ -600,35 +667,12 @@
             `;
             
             resultDiv.style.display = 'block';
+            
+            // Show the results ad after results are displayed
+            document.getElementById('resultsAd').style.display = 'block';
+            
             resultDiv.scrollIntoView({ behavior: 'smooth' });
         });
     </script>
-
-    <div class="container" style="margin: 3rem auto; text-align: center;">
-        <h3>Comprehensive International Trade Regulations</h3>
-        <p>Based on official customs regulations, international treaties, and trade agreements</p>
-        
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem; margin-top: 2rem;">
-            <div style="padding: 1rem; background: white; border-radius: 5px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
-                <h4>🌍 International Standards</h4>
-                <p>WTO agreements, WCO standards, UN regulations</p>
-            </div>
-            <div style="padding: 1rem; background: white; border-radius: 5px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
-                <h4>📚 Official Sources</h4>
-                <p>Government publications, customs bulletins, trade agreements</p>
-            </div>
-            <div style="padding: 1rem; background: white; border-radius: 5px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
-                <h4>⚖️ Legal Compliance</h4>
-                <p>Based on actual laws and regulations</p>
-            </div>
-        </div>
-    </div>
-
-    <footer style="background: #333; color: white; text-align: center; padding: 2rem 0; margin-top: 3rem;">
-        <div class="container">
-            <p>&copy; 2024 CanIShip. Authentic international shipping intelligence.</p>
-            <p><small>Disclaimer: This information is for guidance only. Always consult with professional customs brokers and official government sources.</small></p>
-        </div>
-    </footer>
 </body>
 </html>
