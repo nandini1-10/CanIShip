@@ -78,25 +78,117 @@
             border-top: 1px solid #ddd;
         }
         
-        /* New Ad Styles */
+        /* Ad Styles */
         .ad-container {
             background: #f8f9fa;
-            padding: 20px;
-            border-radius: 10px;
-            margin: 25px 0;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 20px 0;
             border-left: 4px solid #667eea;
             text-align: center;
         }
         
         .ad-title {
-            font-size: 16px;
+            font-size: 14px;
             color: #333;
-            margin-bottom: 15px;
+            margin-bottom: 10px;
             font-weight: bold;
+        }
+        
+        .ad-left {
+            position: fixed;
+            left: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 160px;
+            z-index: 1000;
+        }
+        
+        .ad-right {
+            position: fixed;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 160px;
+            z-index: 1000;
+        }
+        
+        .ad-footer {
+            text-align: center;
+            margin: 30px 0;
+        }
+        
+        .main-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Ensure content doesn't hide behind ads */
+        body {
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+        
+        @media (max-width: 1200px) {
+            .ad-left, .ad-right {
+                position: static;
+                transform: none;
+                width: 100%;
+                margin: 20px auto;
+                max-width: 160px;
+            }
+            body {
+                padding-left: 10px;
+                padding-right: 10px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .ad-left, .ad-right {
+                display: none;
+            }
+            .main-content {
+                padding: 0 10px;
+            }
         }
     </style>
 </head>
 <body>
+    <!-- Left Side Banner Ad -->
+    <div class="ad-left">
+        <div class="ad-container">
+            <div class="ad-title">🚚 Shipping Partners</div>
+            <script type="text/javascript">
+                atOptions = {
+                    'key' : 'd495d742fb96c34350eaef630e68642c',
+                    'format' : 'iframe',
+                    'height' : 600,
+                    'width' : 160,
+                    'params' : {}
+                };
+            </script>
+            <script type="text/javascript" src="//www.highperformanceformat.com/d495d742fb96c34350eaef630e68642c/invoke.js"></script>
+        </div>
+    </div>
+
+    <!-- Right Side Banner Ad -->
+    <div class="ad-right">
+        <div class="ad-container">
+            <div class="ad-title">🌍 Global Logistics</div>
+            <script type="text/javascript">
+                atOptions = {
+                    'key' : 'd495d742fb96c34350eaef630e68642c',
+                    'format' : 'iframe',
+                    'height' : 600,
+                    'width' : 160,
+                    'params' : {}
+                };
+            </script>
+            <script type="text/javascript" src="//www.highperformanceformat.com/d495d742fb96c34350eaef630e68642c/invoke.js"></script>
+        </div>
+    </div>
+
     <header class="header">
         <div class="container">
             <h1>🚚 CanIShip</h1>
@@ -104,95 +196,121 @@
         </div>
     </header>
 
-    <!-- Adsterra Native Ad - Header -->
-    <div class="ad-container">
-        <div class="ad-title">🚀 Recommended Shipping Partners</div>
-        <script async="async" data-cfasync="false" src="//pl27711528.revenuecpmgate.com/9ca95a7f92319987c9b264035abf8784/invoke.js"></script>
-        <div id="container-9ca95a7f92319987c9b264035abf8784"></div>
-    </div>
-
-    <section class="hero">
-        <div class="container">
-            <h1>Official Shipping Regulations Database</h1>
-            <p>Real rules from customs authorities, trade agreements, and international law</p>
-            
-            <div class="shipping-checker">
-                <h2>Check Authentic Shipping Rules</h2>
-                <form id="shippingForm">
-                    <div class="form-group">
-                        <label for="destination">Destination Country:</label>
-                        <select id="destination" required>
-                            <option value="">Select country...</option>
-                            <option value="US">United States</option>
-                            <option value="UK">United Kingdom</option>
-                            <option value="DE">Germany</option>
-                            <option value="CA">Canada</option>
-                            <option value="AU">Australia</option>
-                            <option value="CN">China</option>
-                            <option value="JP">Japan</option>
-                            <option value="FR">France</option>
-                            <option value="IT">Italy</option>
-                            <option value="AE">United Arab Emirates</option>
-                        </select>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="product">Product Category:</label>
-                        <select id="product" required>
-                            <option value="">Select category...</option>
-                            <option value="electronics">Electronics & Devices</option>
-                            <option value="supplements">Supplements & Vitamins</option>
-                            <option value="cosmetics">Cosmetics & Skincare</option>
-                            <option value="food">Food & Beverages</option>
-                            <option value="alcohol">Alcoholic Beverages</option>
-                            <option value="medicine">Medication & Drugs</option>
-                            <option value="clothing">Clothing & Apparel</option>
-                            <option value="books">Books & Media</option>
-                            <option value="batteries">Lithium Batteries</option>
-                            <option value="chemicals">Chemicals & Lab Equipment</option>
-                        </select>
-                    </div>
-                    
-                    <button type="submit" class="btn">Check Official Rules</button>
-                </form>
+    <div class="main-content">
+        <section class="hero">
+            <div class="container">
+                <h1>Official Shipping Regulations Database</h1>
+                <p>Real rules from customs authorities, trade agreements, and international law</p>
                 
-                <div id="result" class="result"></div>
+                <!-- Top Banner Ad -->
+                <div class="ad-container">
+                    <div class="ad-title">🚀 International Shipping Experts</div>
+                    <script type="text/javascript">
+                        atOptions = {
+                            'key' : 'd495d742fb96c34350eaef630e68642c',
+                            'format' : 'iframe',
+                            'height' : 600,
+                            'width' : 160,
+                            'params' : {}
+                        };
+                    </script>
+                    <script type="text/javascript" src="//www.highperformanceformat.com/d495d742fb96c34350eaef630e68642c/invoke.js"></script>
+                </div>
+                
+                <div class="shipping-checker">
+                    <h2>Check Authentic Shipping Rules</h2>
+                    <form id="shippingForm">
+                        <div class="form-group">
+                            <label for="destination">Destination Country:</label>
+                            <select id="destination" required>
+                                <option value="">Select country...</option>
+                                <option value="US">United States</option>
+                                <option value="UK">United Kingdom</option>
+                                <option value="DE">Germany</option>
+                                <option value="CA">Canada</option>
+                                <option value="AU">Australia</option>
+                                <option value="CN">China</option>
+                                <option value="JP">Japan</option>
+                                <option value="FR">France</option>
+                                <option value="IT">Italy</option>
+                                <option value="AE">United Arab Emirates</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="product">Product Category:</label>
+                            <select id="product" required>
+                                <option value="">Select category...</option>
+                                <option value="electronics">Electronics & Devices</option>
+                                <option value="supplements">Supplements & Vitamins</option>
+                                <option value="cosmetics">Cosmetics & Skincare</option>
+                                <option value="food">Food & Beverages</option>
+                                <option value="alcohol">Alcoholic Beverages</option>
+                                <option value="medicine">Medication & Drugs</option>
+                                <option value="clothing">Clothing & Apparel</option>
+                                <option value="books">Books & Media</option>
+                                <option value="batteries">Lithium Batteries</option>
+                                <option value="chemicals">Chemicals & Lab Equipment</option>
+                            </select>
+                        </div>
+                        
+                        <button type="submit" class="btn">Check Official Rules</button>
+                    </form>
+                    
+                    <div id="result" class="result"></div>
 
-                <!-- Adsterra Native Ad - After Results -->
-                <div class="ad-container" id="resultsAd" style="display: none;">
-                    <div class="ad-title">🌍 Global Shipping Solutions</div>
-                    <script async="async" data-cfasync="false" src="//pl27711528.revenuecpmgate.com/9ca95a7f92319987c9b264035abf8784/invoke.js"></script>
-                    <div id="container-9ca95a7f92319987c9b264035abf8784"></div>
+                    <!-- Results Banner Ad -->
+                    <div class="ad-container" id="resultsAd" style="display: none;">
+                        <div class="ad-title">📦 Shipping Solutions</div>
+                        <script type="text/javascript">
+                            atOptions = {
+                                'key' : 'd495d742fb96c34350eaef630e68642c',
+                                'format' : 'iframe',
+                                'height' : 600,
+                                'width' : 160,
+                                'params' : {}
+                            };
+                        </script>
+                        <script type="text/javascript" src="//www.highperformanceformat.com/d495d742fb96c34350eaef630e68642c/invoke.js"></script>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="container" style="margin: 3rem auto; text-align: center;">
+            <h3>Comprehensive International Trade Regulations</h3>
+            <p>Based on official customs regulations, international treaties, and trade agreements</p>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem; margin-top: 2rem;">
+                <div style="padding: 1rem; background: white; border-radius: 5px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
+                    <h4>🌍 International Standards</h4>
+                    <p>WTO agreements, WCO standards, UN regulations</p>
+                </div>
+                <div style="padding: 1rem; background: white; border-radius: 5px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
+                    <h4>📚 Official Sources</h4>
+                    <p>Government publications, customs bulletins, trade agreements</p>
+                </div>
+                <div style="padding: 1rem; background: white; border-radius: 5px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
+                    <h4>⚖️ Legal Compliance</h4>
+                    <p>Based on actual laws and regulations</p>
                 </div>
             </div>
         </div>
-    </section>
 
-    <!-- Adsterra Native Ad - Before Footer -->
-    <div class="container">
-        <div class="ad-container">
-            <div class="ad-title">📦 International Logistics Partners</div>
-            <script async="async" data-cfasync="false" src="//pl27711528.revenuecpmgate.com/9ca95a7f92319987c9b264035abf8784/invoke.js"></script>
-            <div id="container-9ca95a7f92319987c9b264035abf8784"></div>
-        </div>
-    </div>
-
-    <div class="container" style="margin: 3rem auto; text-align: center;">
-        <h3>Comprehensive International Trade Regulations</h3>
-        <p>Based on official customs regulations, international treaties, and trade agreements</p>
-        
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem; margin-top: 2rem;">
-            <div style="padding: 1rem; background: white; border-radius: 5px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
-                <h4>🌍 International Standards</h4>
-                <p>WTO agreements, WCO standards, UN regulations</p>
-            </div>
-            <div style="padding: 1rem; background: white; border-radius: 5px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
-                <h4>📚 Official Sources</h4>
-                <p>Government publications, customs bulletins, trade agreements</p>
-            </div>
-            <div style="padding: 1rem; background: white; border-radius: 5px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
-                <h4>⚖️ Legal Compliance</h4>
-                <p>Based on actual laws and regulations</p>
+        <!-- Footer Banner Ad -->
+        <div class="ad-footer">
+            <div class="ad-container">
+                <div class="ad-title">💼 Trade Compliance</div>
+                <script type="text/javascript">
+                    atOptions = {
+                        'key' : 'd495d742fb96c34350eaef630e68642c',
+                        'format' : 'iframe',
+                        'height' : 600,
+                        'width' : 160,
+                        'params' : {}
+                    };
+                </script>
+                <script type="text/javascript" src="//www.highperformanceformat.com/d495d742fb96c34350eaef630e68642c/invoke.js"></script>
             </div>
         </div>
     </div>
@@ -207,7 +325,6 @@
     <script>
         // AUTHENTIC SHIPPING RULES DATABASE - Based on official regulations
         const authenticRules = {
-            // ==================== UNITED STATES (US) ====================
             US: {
                 electronics: {
                     status: "restricted",
@@ -301,8 +418,6 @@
                     sources: ["DOT Hazardous Materials Regulations", "FAA Lithium Battery Guidance"]
                 }
             },
-
-            // ==================== UNITED ARAB EMIRATES (AE) ====================
             AE: {
                 alcohol: {
                     status: "prohibited",
@@ -344,8 +459,6 @@
                     sources: ["UAE Standardization Law", "GSO Cosmetic Regulations"]
                 }
             },
-
-            // ==================== GERMANY (DE) - EU REPRESENTATIVE ====================
             DE: {
                 electronics: {
                     status: "restricted",
@@ -374,8 +487,6 @@
                     sources: ["EU General Food Law Regulation 178/2002", "German Food and Feed Code"]
                 }
             },
-
-            // ==================== AUSTRALIA (AU) ====================
             AU: {
                 food: {
                     status: "restricted",
@@ -404,8 +515,6 @@
                     sources: ["Therapeutic Goods Act 1989", "TGA Complementary Medicines Regulation"]
                 }
             },
-
-            // ==================== JAPAN (JP) ====================
             JP: {
                 medicine: {
                     status: "restricted",
@@ -434,8 +543,6 @@
                     sources: ["Electrical Appliance and Material Safety Law", "Japanese Industrial Standards"]
                 }
             },
-
-            // ==================== CHINA (CN) ====================
             CN: {
                 electronics: {
                     status: "restricted",
@@ -464,8 +571,6 @@
                     sources: ["Cosmetics Supervision and Administration Regulation", "GB/T Standards"]
                 }
             },
-
-            // ==================== CANADA (CA) ====================
             CA: {
                 supplements: {
                     status: "restricted",
@@ -494,8 +599,6 @@
                     sources: ["Excise Act 2001", "Provincial Liquor Control Acts"]
                 }
             },
-
-            // ==================== UNITED KINGDOM (UK) ====================
             UK: {
                 electronics: {
                     status: "restricted",
@@ -509,53 +612,6 @@
                         "Waste regulations compliance"
                     ],
                     sources: ["UK Product Safety Framework", "British Standards Institution"]
-                }
-            },
-
-            // ==================== SAUDI ARABIA (SA) ====================
-            SA: {
-                alcohol: {
-                    status: "prohibited",
-                    message: "Complete prohibition under Islamic law",
-                    requirements: [
-                        "Absolute ban based on Sharia law",
-                        "No exceptions for personal use",
-                        "Criminal penalties including fines and imprisonment",
-                        "Customs officials trained to detect",
-                        "Religious prohibition strictly enforced",
-                        "No import licenses issued to private entities"
-                    ],
-                    sources: ["Saudi Arabian Customs Law", "Islamic Sharia Compliance"]
-                },
-                books: {
-                    status: "restricted",
-                    message: "Media content subject to religious and cultural review",
-                    requirements: [
-                        "Ministry of Media approval required",
-                        "Content review for religious compliance",
-                        "No content contradicting Islamic values",
-                        "Arabic language preference",
-                        "Import license for commercial quantities",
-                        "Customs inspection for prohibited content"
-                    ],
-                    sources: ["Saudi Press and Publications Law", "Customs Import Regulations"]
-                }
-            },
-
-            // ==================== FRANCE (FR) ====================
-            FR: {
-                cosmetics: {
-                    status: "restricted",
-                    message: "EU Cosmetics Regulation compliance required",
-                    requirements: [
-                        "CPNP notification before marketing",
-                        "Safety assessment by qualified person",
-                        "Product Information File maintenance",
-                        "French language labeling",
-                        "Nanomaterial notification if applicable",
-                        "Responsible person established in EU"
-                    ],
-                    sources: ["EU Cosmetics Regulation 1223/2009", "French Public Health Code"]
                 }
             }
         };
