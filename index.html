@@ -4,6 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CanIShip - Authentic International Shipping Rules</title>
+    
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-QHLZVD3Y4M"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-QHLZVD3Y4M');
+    </script>
+    
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; }
@@ -155,6 +165,8 @@
     </style>
 </head>
 <body>
+    <!-- Google Analytics Tracking Active -->
+
     <!-- Left Side Banner Ad -->
     <div class="ad-left">
         <div class="ad-container">
@@ -675,6 +687,7 @@
             };
         };
 
+        // Track form submissions in Google Analytics
         document.getElementById('shippingForm').addEventListener('submit', function(e) {
             e.preventDefault();
             
@@ -688,6 +701,13 @@
             
             const countryName = document.querySelector(`#destination option[value="${destination}"]`).textContent;
             const productName = document.querySelector(`#product option[value="${product}"]`).textContent;
+            
+            // Track the search in Google Analytics
+            gtag('event', 'search', {
+                'event_category': 'shipping_rules',
+                'event_label': `${productName} to ${countryName}`,
+                'value': 1
+            });
             
             let rule;
             if (authenticRules[destination] && authenticRules[destination][product]) {
@@ -727,7 +747,20 @@
             // Show the results ad after results are displayed
             document.getElementById('resultsAd').style.display = 'block';
             
+            // Track result view
+            gtag('event', 'view_result', {
+                'event_category': 'shipping_rules',
+                'event_label': rule.status,
+                'value': 1
+            });
+            
             resultDiv.scrollIntoView({ behavior: 'smooth' });
+        });
+
+        // Track page view
+        gtag('event', 'page_view', {
+            'page_title': 'CanIShip - Shipping Rules Checker',
+            'page_location': window.location.href
         });
     </script>
 </body>
